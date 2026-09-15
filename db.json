@@ -1,19 +1,412 @@
 {
-  "posts": [
+  "category": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Cement & Building Materials",
+      "quantity": 45,
+      "isTopSeller": true
+    },
+    {
+      "id": 2,
+      "name": "Steel & Metal",
+      "quantity": 48,
+      "isTopSeller": true
+    },
+    {
+      "id": 3,
+      "name": "Roofing Materials",
+      "quantity": 65,
+      "isTopSeller": true
+    },
+    {
+      "id": 4,
+      "name": "Plumbing",
+      "quantity": 37,
+      "isTopSeller": false
+    },
+    {
+      "id": 5,
+      "name": "Paint & Decoration",
+      "quantity": 48,
+      "isTopSeller": true
+    },
+    {
+      "id": 6,
+      "name": "Hardware & Security",
+      "quantity": 22,
+      "isTopSeller": false
     }
   ],
-  "comments": [
+
+  "Items": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "categoryId": 1,
+      "name": "Cement 50kg",
+      "Quantity": 45,
+      "buyingPrice": 720,
+      "SellingPrice": 850
+    },
+    {
+      "id": 2,
+      "categoryId": 2,
+      "name": "Binding Wire 25kg",
+      "Quantity": 30,
+      "buyingPrice": 3200,
+      "SellingPrice": 3800
+    },
+    {
+      "id": 3,
+      "categoryId": 2,
+      "name": "Steel Bar 12mm",
+      "Quantity": 18,
+      "buyingPrice": 850,
+      "SellingPrice": 1050
+    },
+    {
+      "id": 4,
+      "categoryId": 2,
+      "name": "Steel Bar 16mm",
+      "Quantity": 0,
+      "buyingPrice": 1450,
+      "SellingPrice": 1750
+    },
+    {
+      "id": 5,
+      "categoryId": 3,
+      "name": "Roofing Iron Sheet 2.5m",
+      "Quantity": 65,
+      "buyingPrice": 950,
+      "SellingPrice": 1150
+    },
+    {
+      "id": 6,
+      "categoryId": 4,
+      "name": "PVC Pipe 25mm",
+      "Quantity": 25,
+      "buyingPrice": 280,
+      "SellingPrice": 350
+    },
+    {
+      "id": 7,
+      "categoryId": 4,
+      "name": "PPR Pipe 20mm",
+      "Quantity": 12,
+      "buyingPrice": 450,
+      "SellingPrice": 550
+    },
+    {
+      "id": 8,
+      "categoryId": 5,
+      "name": "Wall Paint 20L",
+      "Quantity": 40,
+      "buyingPrice": 3200,
+      "SellingPrice": 3900
+    },
+    {
+      "id": 9,
+      "categoryId": 5,
+      "name": "Paint Brush 4 inch",
+      "Quantity": 8,
+      "buyingPrice": 180,
+      "SellingPrice": 250
+    },
+    {
+      "id": 10,
+      "categoryId": 6,
+      "name": "Door Lock Set",
+      "Quantity": 22,
+      "buyingPrice": 850,
+      "SellingPrice": 1100
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+
+  "soldItems": [
+    {
+      "id": 1,
+      "itemId": 1,
+      "quantity": 15,
+      "price": 850
+    },
+    {
+      "id": 2,
+      "itemId": 2,
+      "quantity": 8,
+      "price": 3800
+    },
+    {
+      "id": 3,
+      "itemId": 3,
+      "quantity": 12,
+      "price": 1050
+    },
+    {
+      "id": 4,
+      "itemId": 4,
+      "quantity": 10,
+      "price": 1750
+    },
+    {
+      "id": 5,
+      "itemId": 5,
+      "quantity": 25,
+      "price": 1150
+    },
+    {
+      "id": 6,
+      "itemId": 6,
+      "quantity": 15,
+      "price": 350
+    },
+    {
+      "id": 7,
+      "itemId": 7,
+      "quantity": 18,
+      "price": 550
+    },
+    {
+      "id": 8,
+      "itemId": 8,
+      "quantity": 20,
+      "price": 3900
+    },
+    {
+      "id": 9,
+      "itemId": 9,
+      "quantity": 32,
+      "price": 250
+    },
+    {
+      "id": 10,
+      "itemId": 10,
+      "quantity": 14,
+      "price": 1100
+    }
+  ],
+
+  "orderedItems": [
+    {
+      "id": 1,
+      "orderId": "ORD-001",
+      "itemId": 1,
+      "categoryId": 1,
+      "name": "Cement 50kg",
+      "supplier": "Bamburi Cement Ltd",
+      "quantityOrdered": 60,
+      "quantityReceived": 45,
+      "buyingPrice": 720,
+      "totalPrice": 43200,
+      "supplyStatus": "Partially Received"
+    },
+    {
+      "id": 2,
+      "orderId": "ORD-001",
+      "itemId": 2,
+      "categoryId": 2,
+      "name": "Binding Wire 25kg",
+      "supplier": "Mabati & Steel Suppliers Ltd",
+      "quantityOrdered": 40,
+      "quantityReceived": 30,
+      "buyingPrice": 3200,
+      "totalPrice": 128000,
+      "supplyStatus": "Partially Received"
+    },
+    {
+      "id": 3,
+      "orderId": "ORD-001",
+      "itemId": 3,
+      "categoryId": 2,
+      "name": "Steel Bar 12mm",
+      "supplier": "Tononoka Steel Ltd",
+      "quantityOrdered": 30,
+      "quantityReceived": 18,
+      "buyingPrice": 850,
+      "totalPrice": 25500,
+      "supplyStatus": "Partially Received"
+    },
+    {
+      "id": 4,
+      "orderId": "ORD-001",
+      "itemId": 4,
+      "categoryId": 2,
+      "name": "Steel Bar 16mm",
+      "supplier": "Tononoka Steel Ltd",
+      "quantityOrdered": 20,
+      "quantityReceived": 0,
+      "buyingPrice": 1450,
+      "totalPrice": 29000,
+      "supplyStatus": "Pending"
+    },
+    {
+      "id": 5,
+      "orderId": "ORD-001",
+      "itemId": 5,
+      "categoryId": 3,
+      "name": "Roofing Iron Sheet 2.5m",
+      "supplier": "Mabati Rolling Mills",
+      "quantityOrdered": 100,
+      "quantityReceived": 65,
+      "buyingPrice": 950,
+      "totalPrice": 95000,
+      "supplyStatus": "Partially Received"
+    },
+    {
+      "id": 6,
+      "orderId": "ORD-001",
+      "itemId": 6,
+      "categoryId": 4,
+      "name": "PVC Pipe 25mm",
+      "supplier": "Davis & Shirtliff",
+      "quantityOrdered": 50,
+      "quantityReceived": 25,
+      "buyingPrice": 280,
+      "totalPrice": 14000,
+      "supplyStatus": "Partially Received"
+    },
+    {
+      "id": 7,
+      "orderId": "ORD-001",
+      "itemId": 7,
+      "categoryId": 4,
+      "name": "PPR Pipe 20mm",
+      "supplier": "Davis & Shirtliff",
+      "quantityOrdered": 25,
+      "quantityReceived": 12,
+      "buyingPrice": 450,
+      "totalPrice": 11250,
+      "supplyStatus": "Partially Received"
+    },
+    {
+      "id": 8,
+      "orderId": "ORD-001",
+      "itemId": 8,
+      "categoryId": 5,
+      "name": "Wall Paint 20L",
+      "supplier": "Crown Paints",
+      "quantityOrdered": 60,
+      "quantityReceived": 40,
+      "buyingPrice": 3200,
+      "totalPrice": 192000,
+      "supplyStatus": "Partially Received"
+    },
+    {
+      "id": 9,
+      "orderId": "ORD-001",
+      "itemId": 9,
+      "categoryId": 5,
+      "name": "Paint Brush 4 inch",
+      "supplier": "Crown Paints",
+      "quantityOrdered": 50,
+      "quantityReceived": 8,
+      "buyingPrice": 180,
+      "totalPrice": 9000,
+      "supplyStatus": "Partially Received"
+    },
+    {
+      "id": 10,
+      "orderId": "ORD-001",
+      "itemId": 10,
+      "categoryId": 6,
+      "name": "Door Lock Set",
+      "supplier": "Kenya Hardware Supplies",
+      "quantityOrdered": 30,
+      "quantityReceived": 22,
+      "buyingPrice": 850,
+      "totalPrice": 25500,
+      "supplyStatus": "Partially Received"
+    }
+  ],
+
+  "receivedItems": [
+    {
+      "id": 1,
+      "orderId": "ORD-001",
+      "itemId": 1,
+      "quantityReceived": 45,
+      "receivedBy": "Store Manager",
+      "receivedDate": "2026-09-10",
+      "condition": "Good"
+    },
+    {
+      "id": 2,
+      "orderId": "ORD-001",
+      "itemId": 2,
+      "quantityReceived": 30,
+      "receivedBy": "Store Manager",
+      "receivedDate": "2026-09-10",
+      "condition": "Good"
+    },
+    {
+      "id": 3,
+      "orderId": "ORD-001",
+      "itemId": 3,
+      "quantityReceived": 18,
+      "receivedBy": "Store Manager",
+      "receivedDate": "2026-09-11",
+      "condition": "Good"
+    },
+    {
+      "id": 4,
+      "orderId": "ORD-001",
+      "itemId": 4,
+      "quantityReceived": 0,
+      "receivedBy": null,
+      "receivedDate": null,
+      "condition": null
+    },
+    {
+      "id": 5,
+      "orderId": "ORD-001",
+      "itemId": 5,
+      "quantityReceived": 65,
+      "receivedBy": "Store Manager",
+      "receivedDate": "2026-09-11",
+      "condition": "Good"
+    },
+    {
+      "id": 6,
+      "orderId": "ORD-001",
+      "itemId": 6,
+      "quantityReceived": 25,
+      "receivedBy": "Store Manager",
+      "receivedDate": "2026-09-12",
+      "condition": "Good"
+    },
+    {
+      "id": 7,
+      "orderId": "ORD-001",
+      "itemId": 7,
+      "quantityReceived": 12,
+      "receivedBy": "Store Manager",
+      "receivedDate": "2026-09-12",
+      "condition": "Good"
+    },
+    {
+      "id": 8,
+      "orderId": "ORD-001",
+      "itemId": 8,
+      "quantityReceived": 40,
+      "receivedBy": "Store Manager",
+      "receivedDate": "2026-09-13",
+      "condition": "Good"
+    },
+    {
+      "id": 9,
+      "orderId": "ORD-001",
+      "itemId": 9,
+      "quantityReceived": 8,
+      "receivedBy": "Store Manager",
+      "receivedDate": "2026-09-13",
+      "condition": "Good"
+    },
+    {
+      "id": 10,
+      "orderId": "ORD-001",
+      "itemId": 10,
+      "quantityReceived": 22,
+      "receivedBy": "Store Manager",
+      "receivedDate": "2026-09-13",
+      "condition": "Good"
+    }
+  ]
 }
