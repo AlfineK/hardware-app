@@ -123,8 +123,10 @@
       "name": "hhjkj",
       "categoryName": "dhhf",
       "quantity": "5",
-      "buyingPrice": "5",
-      "SellingPrice": "6"
+      "buyingPrice": 655,
+      "SellingPrice": "6",
+      "categoryId": "2",
+      "Quantity": 55
     },
     {
       "name": "hhjkj",
@@ -133,14 +135,6 @@
       "buyingPrice": "5",
       "SellingPrice": "6",
       "id": 11
-    },
-    {
-      "name": "hhjkj",
-      "categoryId": "2",
-      "Quantity": "5",
-      "buyingPrice": "5",
-      "SellingPrice": "6",
-      "id": 12
     },
     {
       "name": "new tool",
