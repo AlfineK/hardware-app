@@ -1,9 +1,16 @@
-import React from 'react'
+import UseFetch from '../hooks/UseFetch'
 
-const GoodsSold = () => {
+const GoodsSold = ({soldItem}) => {
+    
+    const items = UseFetch("Items");
+    console.log(items);
   return (
-    <div  className='flex flex-col bg-white border border-slate-200 w-140 rounded-lg mt-6 '>
-      GoodsSold</div>
+    <tbody className="divide-y divide-slate-100 text-slate-700">
+                <tr className="hover:bg-slate-50/80 transition-colors">
+                    <td className="py-3.5 px-4">{soldItem.id}</td>
+                </tr>
+
+    </tbody>
   )
 }
 

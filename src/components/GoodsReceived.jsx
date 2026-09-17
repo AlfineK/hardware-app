@@ -1,35 +1,43 @@
 import React from 'react';
 
-const GoodsReceived = ({ receivedItems, orderdItems }) => {
+const GoodsReceived = ({ receivedItems, orderedItems }) => {
     const style = "text-slate-900 font-sans antialiased";
 
+    // console.log("ordered items: ", orderdItems);
+    // console.log("received items: ", receivedItems);
+
     return (
-        <tr className="hover:bg-slate-50/80 transition-colors duration-300">
-            <td>
-                <div>
-                    <p className={`${style} font-semibold`}>
-                        {orderdItems.supplier}
-                    </p>
+    <>
+        {receivedItems.map((received) => (
+            <tr
+                key={received.id}
+                className="hover:bg-slate-50/80 transition-colors duration-300"
+            >
+                <td className="py-3.5 px-4">
+                    <div>
+                        <p className={`${style} font-semibold`}>
+                            {orderedItems.supplier}
+                        </p>
 
-                    <p className={style}>
-                        {orderdItems.orderId}
-                    </p>
-                </div>
-            </td>
+                        <p className={style}>
+                            {orderedItems.orderId}
+                        </p>
+                    </div>
+                </td>
 
-            <td>{orderdItems.quantityOrdered}</td>
+                <td>{orderedItems.quantityOrdered}</td>
 
-            <td>
-                {receivedItems?.quantityReceived ?? 0}
-            </td>
+                <td>{received.quantityReceived ?? 0}</td>
 
-            <td>{orderdItems.buyingPrice}</td>
+                <td>{orderedItems.buyingPrice}</td>
 
-            <td>{orderdItems.totalPrice}</td>
+                <td>{orderedItems.totalPrice}</td>
 
-            <td>{orderdItems.supplyStatus}</td>
-        </tr>
-    );
+                <td>{orderedItems.supplyStatus}</td>
+            </tr>
+        ))}
+    </>
+);
 };
 
 export default GoodsReceived;

@@ -1,7 +1,7 @@
 import NavBar from './components/common/NavBar'
 import TotalGoodsSold from './components/TotalGoodsSold'
 import ReceivedVsPurchase from './components/ReceivedVsPurchase'
-import GoodsSold from './components/GoodsSold'
+import GoodsSoldList from './components/GoodsSoldList'
 import TotalInventory from './components/TotalInventory'
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
           </div>
           <main className='grid grid-cols-2 items-start gap-6 '>
             <ReceivedVsPurchase/>
-            <GoodsSold/>
+            <GoodsSoldList/>
           </main>
         </div>
         
