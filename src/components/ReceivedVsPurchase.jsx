@@ -1,6 +1,7 @@
 import GoodsReceivedList from "./GoodsReceivedList"
 
 const ReceivedVsPurchase = () => {
+  const style = "py-3 px-3 text-right font-semibold"
   return (
     <div className='flex flex-col bg-white border border-slate-200/90 shadow-sm w-140 rounded-lg mt-6 '>
 
@@ -21,12 +22,12 @@ const ReceivedVsPurchase = () => {
         <table className="w-full text-left text-xs border-collapse">
           <thead>
             <tr className="bg-slate-50 text-slate-600 font-mono uppercase tracking-wider text-[11px] border-b border-slate-200">
-              <th>Supplier</th>
-              <th>Ordered</th>
-              <th>Received</th>
-              <th>Buying Price</th>
-              <th>Total</th>
-              <th>Status</th>
+              <th className={`py-3 px-3 text-left font-semibold`}>Supplier</th>
+              <th className={style}>Ordered</th>
+              <th className={style}>Received</th>
+              <th className={style}>Buying Price</th>
+              <th className={style}>Total</th>
+              <th className={style}>Status</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-100 text-slate-700">

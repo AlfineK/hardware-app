@@ -1,17 +1,23 @@
-import UseFetch from '../hooks/UseFetch'
-
-const GoodsSold = ({soldItem}) => {
-    
-    const items = UseFetch("Items");
-    console.log(items);
+const GoodsSold = ({ soldItem, individualItems, totalRevenue }) => {
   return (
-    <tbody className="divide-y divide-slate-100 text-slate-700">
-                <tr className="hover:bg-slate-50/80 transition-colors">
-                    <td className="py-3.5 px-4">{soldItem.id}</td>
-                </tr>
+    <>
+      {individualItems.map((individualItem) => (
+        <tr
+          key={individualItem.id}
+          className="hover:bg-slate-50/80 transition-colors duration-300"
+        >
+          <td className="py-3.5 px-4 font-semibold text-slate-900 text-xs">
+            <p>{individualItem.name}</p>
+           
+          </td>
+          <td className="py-3.5 px-4">{soldItem.quantity}</td>
+          <td className="py-3.5 px-4">{soldItem.price}</td>
+          <td className="py-3.5 px-4">{totalRevenue}</td>
+          <td className="py-3.5 px-4"></td>
+        </tr>
+      ))}
+    </>
+  );
+};
 
-    </tbody>
-  )
-}
-
-export default GoodsSold
+export default GoodsSold;
