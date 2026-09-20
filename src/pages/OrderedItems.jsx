@@ -18,36 +18,44 @@ const OrderedItems = () => {
     navigate("/")
   }
   return (
-    <div onClick={exit} className="bg-white border border-slate-200 shadow-sm rounded-lg w-80 ">
-      <p className="text-[12px] font-semibold font-mono uppercase tracking-wider py-3 px-5 bg-slate-50/80">Ordered Items</p>
-      {matchingItem && (
-        <div>
-          <div className="grid grid-cols-2 items-center border-t border-slate-100">
-            <p className={style}>Item ID:</p>
-            <p className="text-[12px] text-slate-500">{matchingItem.id}</p>
-          </div>
+    <div onClick={exit} className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center ">
+      <div className="bg-white border border-slate-200 shadow-sm rounded-lg w-80 h-60">
+     
+        <p className="text-sm font-semibold py-3 px-5 bg-slate-50/80 rounded-t-lg">
+          Ordered Items
+        </p>
 
-          <div className="grid grid-cols-2 items-center border-t border-slate-100">
-            <p className={style}>Item Name:</p>
-            <p className="text-[12px] text-slate-500">{matchingItem.name}</p>
-          </div>
+        {matchingItem && (
+          <div>
+            <div className="grid grid-cols-2 items-center border-t border-slate-100">
+              <p className={style}>Item ID:</p>
+              <p className="text-[12px] text-slate-500">{matchingItem.id}</p>
+            </div>
 
-          <div className="grid grid-cols-2 items-center border-t border-slate-100">
-            <p className={style}>Quantity:</p>
-            <p className="text-[12px] text-slate-500">{matchingItem.Quantity}</p>
-          </div>
+            <div className="grid grid-cols-2 items-center border-t border-slate-100">
+              <p className={style}>Item Name:</p>
+              <p className="text-[12px] text-slate-500">{matchingItem.name}</p>
+            </div>
 
-          <div className="grid grid-cols-2 items-center border-t border-slate-100">
-            <p className={style}>Buying Price:</p>
-            <p className="text-[12px] text-slate-500">{matchingItem.buyingPrice}</p>
-          </div>
+            <div className="grid grid-cols-2 items-center border-t border-slate-100">
+              <p className={style}>Quantity:</p>
+              <p className="text-[12px] text-slate-500">{matchingItem.Quantity}</p>
+            </div>
 
-          <div className="grid grid-cols-2 items-center border-t border-slate-100">
-            <p className={style}>Selling Price:</p>
-            <p className="text-[12px] text-slate-500">{matchingItem.SellingPrice}</p>
-          </div>
-        </div>       
-      )}
+            <div className="grid grid-cols-2 items-center border-t border-slate-100">
+              <p className={style}>Buying Price:</p>
+              <p className="text-[12px] text-slate-500">{matchingItem.buyingPrice}</p>
+            </div>
+
+            <div className="grid grid-cols-2 items-center border-t border-slate-100">
+              <p className={style}>Selling Price:</p>
+              <p className="text-[12px] text-slate-500">{matchingItem.SellingPrice}</p>
+            </div>
+
+          </div>       
+        )}
+         
+      </div>
     </div>
   )
 }
