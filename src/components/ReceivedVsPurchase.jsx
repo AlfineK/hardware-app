@@ -1,4 +1,5 @@
 import GoodsReceivedList from "./GoodsReceivedList"
+import { Outlet } from "react-router-dom"
 
 const ReceivedVsPurchase = () => {
   const style = "py-3 px-3 text-left font-semibold"
@@ -35,7 +36,7 @@ const ReceivedVsPurchase = () => {
           </tbody>
         </table>
       </div>
-
+      <Outlet />
     </div>
   )
 }

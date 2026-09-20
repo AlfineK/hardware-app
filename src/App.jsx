@@ -21,8 +21,9 @@ const App = () => {
             </div>
             <main className='grid grid-cols-2 items-start gap-6 '>
               <Routes>
-                <Route path="/" element={<ReceivedVsPurchase/>} />
-                <Route path="/ReceivedVsPurchase/OrderedItems/:id" element={<OrderedItems/>}/>
+                <Route path="/" element={<ReceivedVsPurchase/>} >
+                  <Route path="/ReceivedVsPurchase/OrderedItems/:id" element={<OrderedItems/>}/>
+                </Route>
               </Routes>
               <GoodsSoldList/>
             </main>
