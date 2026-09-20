@@ -3,6 +3,7 @@ import {useNavigate} from "react-router-dom"
 
 const GoodsReceived = ({ receivedItems, orderedItems }) => {
     const style = "text-slate-900 font-sans antialiased";
+    const dataStyle ="px-3 "
     const navigate = useNavigate();
 
     function showOrderdItems(e,id){
@@ -20,7 +21,7 @@ const GoodsReceived = ({ receivedItems, orderedItems }) => {
                 key={received.id}
                 className="hover:bg-slate-50/80 transition-colors duration-300"
             >
-                <td className="py-3.5 px-4">
+                <td className="py-3.5 px-3">
                     <div>
                         <p className={`${style} font-semibold`}>
                             {orderedItems.supplier}
@@ -31,11 +32,11 @@ const GoodsReceived = ({ receivedItems, orderedItems }) => {
                         </p>
                     </div>
                 </td>
-                <td>{orderedItems.quantityOrdered}</td>
-                <td>{received.quantityReceived ?? 0}</td>
-                <td>{orderedItems.buyingPrice}</td>
-                <td>{orderedItems.totalPrice}</td>
-                <td>{orderedItems.supplyStatus}</td>
+                <td className={dataStyle}>{orderedItems.quantityOrdered}</td>
+                <td className={dataStyle}>{received.quantityReceived ?? 0}</td>
+                <td className={dataStyle}>{orderedItems.buyingPrice}</td>
+                <td className={dataStyle}>{orderedItems.totalPrice}</td>
+                <td className={dataStyle}>{orderedItems.supplyStatus}</td>
             </tr>
         ))}
         
