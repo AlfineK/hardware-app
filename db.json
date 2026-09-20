@@ -304,7 +304,7 @@
     },
     {
       "id": 10,
-      "orderId": "ORD-003",
+      "orderId": "ORD-001",
       "itemId": 10,
       "categoryId": 6,
       "name": "Door Lock Set",
@@ -367,7 +367,7 @@
       "id": 6,
       "orderId": "ORD-001",
       "itemId": 6,
-      "quantityReceived": 25,
+      "quantityReceived": 50,
       "receivedBy": "Store Manager",
       "receivedDate": "2026-09-12",
       "condition": "Good"
@@ -394,14 +394,14 @@
       "id": 9,
       "orderId": "ORD-001",
       "itemId": 9,
-      "quantityReceived": 8,
+      "quantityReceived": 50,
       "receivedBy": "Store Manager",
       "receivedDate": "2026-09-13",
       "condition": "Good"
     },
     {
       "id": 10,
-      "orderId": "ORD-002",
+      "orderId": "ORD-001",
       "itemId": 10,
       "quantityReceived": 22,
       "receivedBy": "Store Manager",
