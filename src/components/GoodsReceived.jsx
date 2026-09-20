@@ -1,12 +1,22 @@
-import React from 'react';
+import {useNavigate} from "react-router-dom"
+
 
 const GoodsReceived = ({ receivedItems, orderedItems }) => {
     const style = "text-slate-900 font-sans antialiased";
+    const navigate = useNavigate();
+
+    function showOrderdItems(e,id){
+        e.preventDefault();
+        // console.log("ID being passed:", id);
+        navigate(`/ReceivedVsPurchase/OrderedItems/${id}`)
+    }
 
     return (
     <>
         {receivedItems.map((received) => (
             <tr
+                onClick = {
+                    (e)=>showOrderdItems(e, received.id)}
                 key={received.id}
                 className="hover:bg-slate-50/80 transition-colors duration-300"
             >
@@ -28,6 +38,8 @@ const GoodsReceived = ({ receivedItems, orderedItems }) => {
                 <td>{orderedItems.supplyStatus}</td>
             </tr>
         ))}
+        
+        
     </>
 );
 };

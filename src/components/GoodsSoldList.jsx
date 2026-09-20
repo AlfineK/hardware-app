@@ -5,9 +5,6 @@ const GoodsSoldList = () => {
 
     const soldItems = UseFetch("soldItems");
     const items = UseFetch("Items");
-
-    console.log("Items: ",items)
-
     const thStyle = "py-3 px-3 text-right font-semibold";
 
     return (
@@ -51,10 +48,6 @@ const GoodsSoldList = () => {
                     );
 
                     const totalRevenue = soldItem.quantity * soldItem.price
-
-                    // console.log("Sold item:", soldItem);
-                    // console.log("Matching item:", individualItem);
-                    console.log("totalRevenue:", totalRevenue);
 
                     return (
                       <GoodsSold
