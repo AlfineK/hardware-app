@@ -1,7 +1,9 @@
 const GoodsSold = ({ soldItem, individualItems, totalRevenue }) => {
+  console.log(individualItems)
   return (
     <>
       {individualItems.map((individualItem) => (
+        
         <tr
           key={individualItem.id}
           className="hover:bg-slate-50/80 transition-colors duration-300"
@@ -13,7 +15,7 @@ const GoodsSold = ({ soldItem, individualItems, totalRevenue }) => {
           <td className="py-3.5 px-4">{soldItem.quantity}</td>
           <td className="py-3.5 px-4">{soldItem.price}</td>
           <td className="py-3.5 px-4">{totalRevenue}</td>
-          <td className="py-3.5 px-4"></td>
+          <td className="py-3.5 px-4">{individualItem.Quantity}</td>
         </tr>
       ))}
     </>
